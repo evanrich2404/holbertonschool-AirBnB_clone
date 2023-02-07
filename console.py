@@ -3,7 +3,14 @@
 Console module that contains the entry point of the command interpreter
 """
 import cmd
-from models import *
+from models.base_model import *
+from models import FileStorage
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
@@ -32,7 +39,7 @@ class HBNBCommand(cmd.Cmd):
         """Empty line + ENTER must not execute anything"""
         pass
 
-    def do_create(self):
+    def do_create(self, line):
         """
         Creates a new instance of a class and prints the unique id
         """
@@ -208,20 +215,20 @@ class HBNBCommand(cmd.Cmd):
         """
         if not line:
             return line
-        
+
         args = line.split()
 
         if args[0] in ['EOF', 'quit', 'create', 'show', 'destroy', 'all',
                        'update', 'count', 'help']:
             return line
-        
+
         args = args[0].split('.')
         class_name = args[0]
-        
+
         if class_name not in HBNBCommand.classes_list:
             print("** class doesn't exist **")
             return line
-        
+
         if len(args) > 1:
             args = args[1].split('(')
             command = args[0]
@@ -231,6 +238,9 @@ class HBNBCommand(cmd.Cmd):
                 new_line += obj_id[1]
 
         return new_line
-    
+
+
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
