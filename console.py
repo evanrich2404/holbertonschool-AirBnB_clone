@@ -14,11 +14,13 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
+
     """
     our command interpreter class that will implement
     quit, EOF, help, and a custom prompt (hbnb). An empty line + ENTER
     must not do anything
     """
+
     prompt = '(hbnb) '
     classes_list = ["BaseModel", "User", "State", "City", "Amenity", "Place",
                     "Review"]
@@ -27,22 +29,30 @@ class HBNBCommand(cmd.Cmd):
     float_attrs = ["latitude", "longitude"]
 
     def do_EOF(self, line):
+
         """Quits console when CTRL + D is pressed"""
+
         print()
         return True
 
     def do_quit(self, line):
+
         """Quit command to exit the program"""
+
         return True
 
     def emptyline(self):
+
         """Empty line + ENTER must not execute anything"""
+
         pass
 
     def do_create(self, line):
+
         """
         Creates a new instance of a class and prints the unique id
         """
+
         if not line:
             print("** class name missing **")
             return
@@ -52,16 +62,18 @@ class HBNBCommand(cmd.Cmd):
         if args[0] not in HBNBCommand.classes_list:
             print("** class doesn't exist **")
             return
-        
+
         new_obj = globals()[args[0]]()
         new_obj.save()
         print(new_obj.id)
 
     def do_show(self, line):
+
         """
         Prints the string representation of an instance based on the class name
         and id
         """
+
         if not line:
             print("** class name missing **")
             return
@@ -87,10 +99,12 @@ class HBNBCommand(cmd.Cmd):
         print("** no instance found **")
 
     def do_destroy(self, line):
+
         """
         Deletes an instance based on the class name and id,
         saves the change into the JSON file
         """
+
         if not line:
             print("** class name missing **")
             return
@@ -119,10 +133,12 @@ class HBNBCommand(cmd.Cmd):
         print("** no instance found **")
 
     def do_all(self, line):
+
         """
         Prints all string representation of all instances based or not on the
         class name
         """
+
         storage = FileStorage()
         all_objs = storage.all()
         obj_list = []
@@ -146,10 +162,12 @@ class HBNBCommand(cmd.Cmd):
         print(obj_list)
 
     def do_update(self, line):
+
         """
         Updates an instance based on the class name and id by adding or
         updating attribute
         """
+
         if not line:
             print("** class name missing **")
             return
@@ -187,9 +205,11 @@ class HBNBCommand(cmd.Cmd):
         print("** no instance found **")
 
     def do_count(self, line):
+
         """
         Retrieve the number of instances of a class
         """
+
         storage = FileStorage()
         all_objs = storage.all()
         count = 0
