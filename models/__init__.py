@@ -1,13 +1,7 @@
 #!/usr/bin/python3
-""" this is the module for the class called BaseModel"""
-import uuid
-from datetime import datetime
+"""The __init__.py file for the models package"""
+from models.engine.file_storage import FileStorage
 
 
-class BaseModel:
-    """this is the superclass for the airbnb project"""
-    
-    def __init__(self):
-        """initializes the object function"""
-        self.id = str(uuid.uuid4())
-        
+storage = FileStorage()
+storage.reload()

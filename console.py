@@ -32,19 +32,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Empty line + ENTER must not execute anything"""
         pass
-    
-    def do_create(self, line):
-        """
-        Creates a new instance of a specified class, and prints
-        the instances unique id
-        """
-        if not line:
-            print("** class name missing **")
-            return
-    
-        args = line.split()
-    
-    
+
     
     if __name__ == '__main__':
     HBNBCommand().cmdloop()
