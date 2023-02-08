@@ -1,18 +1,7 @@
-# holbertonschool-AirBnB_clone
-
-# requirements:
-# description of the project
-# description of the command interpreter:
-# how to start it
-# how to use it
-# examples
-
 # Evan Richardson and Malik Walker's AirBnB_clone
 
 ## Welcome the the holbertonschool-AirBnB_clone Project!
 In this readme I shall try and give a brief explanation/overview of our project for you.
-
-[insert flowchart here]
 
 
 ## How to access the console:
