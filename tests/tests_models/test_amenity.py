@@ -4,7 +4,8 @@ import unittest
 import models
 import os
 from datetime import datetime
-from models.amenity import Amenity
+from models.amenity import amenity
+
 
 
 class TestAmenityModel(unittest.TestCase):

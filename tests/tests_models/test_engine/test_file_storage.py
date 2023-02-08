@@ -4,6 +4,8 @@ import os
 import json
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
+import pep8
+
 
 
 class TestFileStorage(unittest.TestCase):
