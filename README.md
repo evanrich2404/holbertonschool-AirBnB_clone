@@ -1,4 +1,4 @@
-# Evan Richardson and Malik Walker's AirBnB_clone
+# Evan Richardson's AirBnB_clone
 
 ## Welcome the the holbertonschool-AirBnB_clone Project!
 In this readme I shall try and give a brief explanation/overview of our project for you.
