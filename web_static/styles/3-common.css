@@ -1,0 +1,27 @@
+Body {
+    color: #484848;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container span {
+    margin-left: 10px;
+}
